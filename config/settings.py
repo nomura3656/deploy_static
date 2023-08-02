@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-oh%eg70rk1r5xf8)**kb(^^)3rfd+@%ddr2t18c6kx=*4*8bns
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -63,7 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.static', #ここ追加
+                'django.template.context_processors.static', #追加 nomura
             ],
         },
     },
@@ -118,16 +118,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = "/static/" #変更 nomura
 """
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static") #これはローカル環境のみで使うものらしいです
 ]
 """
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static") #追加 nomura
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ALLOWED_HOSTS = ['deploy-test-nomura.azurewebsites.net']
+ALLOWED_HOSTS = ['deploy-test-nomura.azurewebsites.net'] #追加 nomura
